@@ -1,4 +1,4 @@
-## react-chat-client
+## react-passport-chat-client
 
 Simple chat client made with React and GraphQL / Apollo
 
