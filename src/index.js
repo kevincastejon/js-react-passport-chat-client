@@ -59,6 +59,7 @@ ReactDOM.render(
     <HashRouter>
       <Route exact path="/signin">
         <SignIn />
+        <a target="_BLANK" href="/auth/facebook">Login with Facebook</a>
       </Route>
       <Route exact path="/signup">
         <SignUp />
