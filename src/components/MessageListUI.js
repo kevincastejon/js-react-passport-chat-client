@@ -93,8 +93,10 @@ Loading
                     color: '#fff',
                     backgroundColor: msg.postedBy.color,
                   }}
+                  alt={msg.postedBy.name}
+                  src={msg.postedBy.avatar ? msg.postedBy.avatar : null}
                 >
-                  {msg.postedBy.name[0].toUpperCase()}
+                  {msg.postedBy.avatar ? null : msg.postedBy.name[0].toUpperCase()}
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
@@ -126,6 +128,8 @@ MessageListUI.propTypes = {
     createdAt: PropTypes.string,
     postedBy: PropTypes.shape({
       name: PropTypes.string,
+      color: PropTypes.string,
+      avatar: PropTypes.string,
     }),
   })).isRequired,
   onLoadMore: PropTypes.func.isRequired,

@@ -46,7 +46,6 @@ export default class SignUp extends React.Component {
             email, password, name, color,
           }}
           onError={(error) => {
-            console.log(error);
             this.setState({ errorMessage: signupErrors.includes(error.message) ? 'Email already used' : 'Unknown error' });
           }}
           onCompleted={(data) => {

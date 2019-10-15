@@ -13,6 +13,7 @@ import { setContext } from 'apollo-link-context';
 import Chat from './components/Chat';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
+import FBAuth from './components/FBAuth';
 import Utils from './Utils';
 import * as serviceWorker from './serviceWorker';
 
@@ -57,9 +58,10 @@ const client = new ApolloClient({
 ReactDOM.render(
   <ApolloProvider client={client}>
     <HashRouter>
+      <Route exact path="/success/:token" component={FBAuth} />
       <Route exact path="/signin">
         <SignIn />
-        <a target="_BLANK" href="/auth/facebook">Login with Facebook</a>
+        <a href="http://localhost:4000/auth/facebook">Login with Facebook</a>
       </Route>
       <Route exact path="/signup">
         <SignUp />

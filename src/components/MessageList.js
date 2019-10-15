@@ -15,7 +15,7 @@ query getMessages($skip: Int, $first: Int){
         id
         content
         createdAt
-        postedBy{name,color}
+        postedBy{name,color,avatar}
       }
       count
   }
@@ -29,7 +29,7 @@ subscription newMessage{
     content
     createdAt
     postedBy{
-      name, color
+      name, color, avatar
     }
   }
 }
